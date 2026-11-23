@@ -60,13 +60,13 @@
   nav a:hover{opacity:1; color:var(--orange);}
   .btn{
     display:inline-flex; align-items:center; gap:8px;
-    background:var(--orange); color:#fff; text-decoration:none;
+    background:var(--orange-dark); color:#fff; text-decoration:none;
     padding:13px 24px; border-radius:var(--radius);
     font-weight:600; font-size:14px; letter-spacing:0.01em;
     border:none; cursor:pointer;
     transition:background .15s ease;
   }
-  .btn:hover{background:var(--orange-dark);}
+  .btn:hover{background:#A63C08;}
   .btn-header{padding:10px 18px; font-size:13px;}
   .menu-toggle{display:none; background:none; border:none; color:#fff; font-size:26px; cursor:pointer;}
 
@@ -98,7 +98,7 @@
   /* Section headers */
   .section-eyebrow{
     font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.08em;
-    text-transform:uppercase; color:var(--teal); display:block; margin-bottom:12px;
+    text-transform:uppercase; color:#0B7A66; display:block; margin-bottom:12px;
   }
   .section-title{font-size:30px; margin-bottom:16px; max-width:640px;}
   .section-intro{color:var(--muted); max-width:640px; font-size:16px; margin-bottom:48px;}
@@ -111,7 +111,7 @@
     padding:28px;
   }
   .card .num{
-    font-family:'IBM Plex Mono', monospace; color:var(--teal); font-size:13px; margin-bottom:14px; display:block;
+    font-family:'IBM Plex Mono', monospace; color:#0B7A66; font-size:13px; margin-bottom:14px; display:block;
   }
   .card h3{font-family:'IBM Plex Sans'; font-weight:600; font-size:18px; margin-bottom:10px;}
   .card p{color:var(--muted); font-size:15px;}
@@ -120,7 +120,7 @@
   .sobre .wrap{display:grid; grid-template-columns:340px 1fr; gap:56px; align-items:center;}
   .sobre .photo{border-radius:10px; overflow:hidden; border:1px solid var(--border);}
   .sobre .eyebrow-name{
-    font-family:'IBM Plex Mono', monospace; color:var(--teal); font-size:13px; margin-bottom:10px; display:block;
+    font-family:'IBM Plex Mono', monospace; color:#0B7A66; font-size:13px; margin-bottom:10px; display:block;
   }
   .sobre h2{font-size:28px; margin-bottom:20px;}
   .sobre p{color:var(--muted); margin-bottom:16px; font-size:15.5px;}
@@ -144,7 +144,7 @@
   .service-item .price.consult{color:var(--orange-dark);}
   .badge{
     display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:11px;
-    background:rgba(255,106,26,0.1); color:var(--orange-dark); padding:3px 9px;
+    background:rgba(255,106,26,0.1); color:#A63C08; padding:3px 9px;
     border-radius:20px; margin-bottom:10px; letter-spacing:0.03em;
   }
   .servicos-note{
@@ -163,12 +163,12 @@
   /* Como funciona */
   .como-funciona{background:var(--steel); color:#fff;}
   .como-funciona .section-title, .como-funciona .section-eyebrow{color:#fff;}
-  .como-funciona .section-eyebrow{color:var(--teal);}
+  .como-funciona .section-eyebrow{color:#5EEAD4;}
   .steps{display:grid; grid-template-columns:repeat(5,1fr); gap:18px; margin-bottom:40px;}
   .step{
     border-top:2px solid var(--teal); padding-top:18px;
   }
-  .step .step-num{font-family:'IBM Plex Mono', monospace; color:var(--teal); font-size:13px; margin-bottom:10px; display:block;}
+  .step .step-num{font-family:'IBM Plex Mono', monospace; color:#5EEAD4; font-size:13px; margin-bottom:10px; display:block;}
   .step h3{font-family:'IBM Plex Sans'; font-weight:600; font-size:15px; margin-bottom:8px; color:#fff;}
   .step p{font-size:13.5px; color:#B7BFC9;}
   .como-funciona .reforco{
@@ -217,7 +217,7 @@
   footer h4{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--teal); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:14px;}
   footer p, footer a{color:#9AA4B0; text-decoration:none; margin-bottom:8px; display:block; font-size:14px;}
   footer a:hover{color:var(--orange);}
-  footer .copyright{border-top:1px solid rgba(255,255,255,0.08); padding-top:22px; font-size:12.5px; color:#6C7580;}
+  footer .copyright{border-top:1px solid rgba(255,255,255,0.08); padding-top:22px; font-size:12.5px; color:#9AA4B0;}
 
   /* Responsive */
   @media (max-width: 860px){
@@ -239,6 +239,23 @@
     .service-item{grid-template-columns:40px 1fr; row-gap:8px;}
     .service-item .price{grid-column:2; padding-top:0;}
   }
+
+  /* Tabela completa de serviços */
+  #precos{scroll-margin-top:92px;}
+  .price-table{margin-top:44px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+  .price-table-head{background:var(--navy);color:#fff;padding:22px 24px;}
+  .price-table-head h3{font-size:22px;margin-bottom:6px;}
+  .price-table-head p{font-size:14px;opacity:.82;max-width:760px;}
+  .price-table-scroll{overflow-x:auto;}
+  .price-table table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px;}
+  .price-table th{text-align:left;padding:12px 16px;background:var(--bg-light);color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border);}
+  .price-table td{padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top;}
+  .price-table tr:last-child td{border-bottom:0;}
+  .price-table tr.cat td{background:#fff;color:var(--orange-dark);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding-top:20px;padding-bottom:6px;}
+  .price-table td.val{white-space:nowrap;font-weight:700;color:var(--ink);}
+  .price-table-note{padding:16px 24px;background:var(--bg-light);font-size:13px;color:var(--muted);}
+
+  .price-table .vol{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:3px;}
 </style>
 </head>
 <body>
@@ -259,6 +276,8 @@
     <a class="btn btn-header" href="https://wa.me/5519996226053" target="_blank" rel="noopener">Falar no WhatsApp</a>
   </div>
 </header>
+
+<main>
 
 <section class="hero">
   <div class="wrap">
@@ -323,6 +342,8 @@
     <h2 class="section-title">Serviços técnicos especializados</h2>
     <p class="section-intro">Cada serviço listado abaixo passa por avaliação individual da peça antes da execução. Trabalhamos com diagnóstico técnico, não com procedimento padronizado.</p>
 
+    <p style="margin-top:12px;"><a href="#precos" style="color:var(--orange-dark);font-weight:700;text-decoration:none;">Ver tabela completa de preços ↓</a></p>
+
     <div class="service-list">
       <div class="service-item">
         <span class="idx mono">01</span>
@@ -330,7 +351,7 @@
           <h3>Afiação de lâminas de tosa</h3>
           <p>Afiação técnica para todas as numerações e marcas de lâminas. O processo devolve o corte uniforme necessário para um acabamento limpo, sem puxar o pelo e sem sobrecarregar a máquina.</p>
         </div>
-        <span class="price">a partir de R$ 20,00</span>
+        <span class="price">a partir de R$ 25,00</span>
       </div>
 
       <div class="service-item">
@@ -338,8 +359,9 @@
         <div>
           <h3>Afiação e ajuste de tesouras profissionais</h3>
           <p>Atendemos tesouras retas e curvas. Além da afiação, fazemos o ajuste de tensão — ponto que faz diferença direta no conforto da mão de quem tosa o dia inteiro.</p>
+          <p style="color:var(--orange-dark);font-weight:600;font-size:13.5px;margin-top:8px;">Enviando 6 ou mais tesouras: R$ 25,00 cada.</p>
         </div>
-        <span class="price">a partir de R$ 20,00</span>
+        <span class="price">a partir de R$ 30,00</span>
       </div>
 
       <div class="service-item highlight">
@@ -359,7 +381,7 @@
           <h3>Solda de dentes quebrados</h3>
           <p>Queda ou impacto quebrou um dente da lâmina? Antes de descartar, mande avaliar. Fazemos a solda e o realinhamento da peça, recuperando uma lâmina que, na maioria das oficinas, seria simplesmente jogada fora.</p>
         </div>
-        <span class="price consult">sob avaliação técnica</span>
+        <span class="price">a partir de R$ 70,00</span>
       </div>
 
       <div class="service-item">
@@ -368,9 +390,53 @@
           <h3>Limpeza, revisão e manutenção de máquinas de tosa</h3>
           <p>Limpeza profunda, revisão de funcionamento e pequenos reparos que evitam problemas maiores. Manutenção preventiva é o que garante que sua máquina não falhe no meio de um atendimento.</p>
         </div>
-        <span class="price">a partir de R$ 40,00</span>
+        <span class="price">a partir de R$ 50,00</span>
       </div>
     </div>
+
+    
+    <!-- PRICE_TABLE_START -->
+    <div class="price-table" id="precos">
+      <div class="price-table-head">
+        <h3>Tabela completa de serviços</h3>
+        <p>Valores unitários de referência. Peças com dano estrutural recebem orçamento individual após avaliação técnica.</p>
+      </div>
+      <div class="price-table-scroll">
+        <table>
+          <thead>
+            <tr><th>Serviço</th><th>Descrição</th><th>Valor</th></tr>
+          </thead>
+          <tbody>
+          <tr class="cat"><td colspan="3">Afiação</td></tr>
+          <tr><td>Lâmina A5</td><td>Desmontagem, limpeza, afiação, regulagem e teste</td><td class="val">R$ 25,00</td></tr>
+          <tr><td>Tesoura (Semi-Navalha / Bisel de Precisão)</td><td>Afiação e ajuste de tensão</td><td class="val">R$ 30,00<br><span class="vol">6 ou mais tesouras: R$ 25,00 cada</span></td></tr>
+          <tr><td>Lâmina Pequena / Troca do Cortante</td><td>Propetz, Bravura</td><td class="val">R$ 50,00</td></tr>
+          <tr class="cat"><td colspan="3">Solda Especial</td></tr>
+          <tr><td>Solda Dente Quebrado (Lâmina 10)</td><td>Solda e realinhamento</td><td class="val">R$ 75,00</td></tr>
+          <tr><td>Solda Dente Quebrado (Lâmina 30 / 40)</td><td>Solda e realinhamento</td><td class="val">R$ 70,00</td></tr>
+          <tr><td>Solda Dente Quebrado (Lâmina 4, 5 e 7)</td><td>Solda e realinhamento</td><td class="val">R$ 95,00</td></tr>
+          <tr class="cat"><td colspan="3">Restauração</td></tr>
+          <tr><td>Abertura de Canal</td><td>Restauração de canal</td><td class="val">R$ 85,00</td></tr>
+          <tr><td>Abertura de Canal (Completo)</td><td>Restauração completa</td><td class="val">R$ 130,00</td></tr>
+          <tr class="cat"><td colspan="3">Manutenção</td></tr>
+          <tr><td>Limpeza / Revisão Máquina Andis</td><td>Limpeza e revisão</td><td class="val">R$ 60,00</td></tr>
+          <tr><td>Limpeza / Revisão Máquina Precision</td><td>Limpeza e revisão</td><td class="val">R$ 50,00</td></tr>
+          <tr class="cat"><td colspan="3">Reparo</td></tr>
+          <tr><td>Troca de Componentes (Cabo, Lingueta, Interruptor)</td><td>Mão de obra; peça à parte</td><td class="val">a partir de R$ 40,00 + peça</td></tr>
+          <tr><td>Manutenção Geral / Eletrônica de Máquinas</td><td>Diagnóstico e reparo</td><td class="val">R$ 70,00</td></tr>
+          <tr><td>Manutenção / Troca de Bateria</td><td>Diagnóstico e troca</td><td class="val">R$ 80,00</td></tr>
+          <tr class="cat"><td colspan="3">Equipamentos</td></tr>
+          <tr><td>Limpeza / Revisão de Soprador Pequeno</td><td>Limpeza e revisão</td><td class="val">R$ 90,00</td></tr>
+          <tr><td>Limpeza / Revisão de Soprador Grande</td><td>Limpeza e revisão</td><td class="val">R$ 110,00</td></tr>
+          <tr><td>Limpeza BÁSICA de Secador</td><td>Limpeza básica</td><td class="val">R$ 120,00</td></tr>
+          <tr><td>Limpeza INTERMEDIÁRIA de Secador</td><td>Limpeza intermediária</td><td class="val">R$ 170,00</td></tr>
+          <tr><td>Limpeza COMPLETA de Secador</td><td>Limpeza completa</td><td class="val">R$ 220,00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="price-table-note">Enviando 6 ou mais tesouras, o valor unitário fica R$ 25,00.</div>
+    </div>
+    <!-- PRICE_TABLE_END -->
 
     <p class="servicos-note">Valores de referência para os serviços mais procurados. Peças com dano estrutural (dente quebrado, canal, recuperação) recebem orçamento individual após avaliação técnica — assim você paga pelo que realmente precisa, nunca por um valor padrão que não reflete o estado da sua peça.</p>
   </div>
@@ -463,37 +529,37 @@
       <div class="produto-card">
         <h3>Óleo Lubrificante Oster 118ml</h3>
         <p>Lubrificação essencial pra prolongar a vida da lâmina entre as afiações.</p>
-        <a class="btn-produto" href="https://meli.la/1SEcH7t" target="_blank" rel="sponsored noopener">Ver oferta</a>
+        <a class="btn-produto" href="https://lista.mercadolivre.com.br/oleo-lubrificante-oster-118ml?matt_tool=85415830&matt_word=neves_rafael_site_oleo_oster" target="_blank" rel="sponsored noopener">Ver oferta</a>
       </div>
       <div class="produto-card">
         <h3>Óleo Lubrificante Andis Clipper Oil 118ml</h3>
         <p>Alternativa Andis para manter o corte suave no dia a dia.</p>
-        <a class="btn-produto" href="https://meli.la/1c6JAoh" target="_blank" rel="sponsored noopener">Ver oferta</a>
+        <a class="btn-produto" href="https://lista.mercadolivre.com.br/oleo-lubrificante-andis-clipper-oil-118ml?matt_tool=85415830&matt_word=neves_rafael_site_oleo_andis" target="_blank" rel="sponsored noopener">Ver oferta</a>
       </div>
       <div class="produto-card">
         <h3>Óleo Spray Andis Cool Care 5 em 1, 439g</h3>
         <p>Limpa, lubrifica, resfria e protege contra ferrugem em um só produto.</p>
-        <a class="btn-produto" href="https://meli.la/1oJS6Cp" target="_blank" rel="sponsored noopener">Ver oferta</a>
+        <a class="btn-produto" href="https://lista.mercadolivre.com.br/oleo-spray-andis-cool-care-5-em-1-439g?matt_tool=85415830&matt_word=neves_rafael_site_coolcare" target="_blank" rel="sponsored noopener">Ver oferta</a>
       </div>
       <div class="produto-card">
         <h3>Organizador 5 Tesouras Porta Barbeiro</h3>
         <p>Organização que evita quedas e danos nas tesouras entre um atendimento e outro.</p>
-        <a class="btn-produto" href="https://meli.la/2TwGDQX" target="_blank" rel="sponsored noopener">Ver oferta</a>
+        <a class="btn-produto" href="https://lista.mercadolivre.com.br/organizador-5-tesouras-porta-barbeiro?matt_tool=85415830&matt_word=neves_rafael_site_organizador" target="_blank" rel="sponsored noopener">Ver oferta</a>
       </div>
       <div class="produto-card">
         <h3>Suporte de Tesouras Para Banho e Tosa</h3>
         <p>Guarda as tesouras com segurança na bancada de trabalho.</p>
-        <a class="btn-produto" href="https://meli.la/2NB62VG" target="_blank" rel="sponsored noopener">Ver oferta</a>
+        <a class="btn-produto" href="https://lista.mercadolivre.com.br/suporte-de-tesouras-para-banho-e-tosa?matt_tool=85415830&matt_word=neves_rafael_site_suporte" target="_blank" rel="sponsored noopener">Ver oferta</a>
       </div>
       <div class="produto-card">
         <h3>Estojo Lâminas Tosa Kyklon</h3>
         <p>Protege as lâminas do impacto e da poeira fora de uso.</p>
-        <a class="btn-produto" href="https://meli.la/1MDUy23" target="_blank" rel="sponsored noopener">Ver oferta</a>
+        <a class="btn-produto" href="https://lista.mercadolivre.com.br/estojo-laminas-tosa-kyklon?matt_tool=85415830&matt_word=neves_rafael_site_estojo_kyklon" target="_blank" rel="sponsored noopener">Ver oferta</a>
       </div>
       <div class="produto-card">
         <h3>Kit 3 Escovas Mini Aço, Nylon e Latão</h3>
         <p>Facilita a limpeza detalhada de máquinas e lâminas entre manutenções.</p>
-        <a class="btn-produto" href="https://meli.la/1rdfQsP" target="_blank" rel="sponsored noopener">Ver oferta</a>
+        <a class="btn-produto" href="https://lista.mercadolivre.com.br/kit-3-escovas-mini-aco-nylon-e-latao?matt_tool=85415830&matt_word=neves_rafael_site_kit_escovas" target="_blank" rel="sponsored noopener">Ver oferta</a>
       </div>
     </div>
     <p class="produtos-disclaimer">Este site pode conter links de afiliado. Ao comprar através deles, a Afiações Neves pode receber uma pequena comissão, sem custo adicional para você.</p>
@@ -508,13 +574,15 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <h3>Afiações Neves</h3>
         <p>Afiação técnica e manutenção para o mercado de banho e tosa.</p>
-        <p class="mono" style="font-size:12.5px; color:#6C7580;">CNPJ 62.146.992/0001-17</p>
+        <p class="mono" style="font-size:12.5px; color:#9AA4B0;">CNPJ 62.146.992/0001-17</p>
       </div>
       <div>
         <h4>Contato</h4>
@@ -534,5 +602,7 @@
   </div>
 </footer>
 
+
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="d6f3678d-d16e-4750-8d08-9fefd49395a2" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZDZmMzY3OGQtZDE2ZS00NzUwLThkMDgtOWZlZmQ0OTM5NWEyIiwiYWNjb3VudF9pZCI6IjZhNjAxZGJiZTU2ZTIwMThkOTZlNDg3NCIsImRlcGxveV9pZCI6IjZhNjY1MDAzMmZiMTlmOWU3NmZlM2Q0NiIsImlzc3VlciI6Im5mc2VydmVyIn0.zGExQ-QJlA_wpSc5lTzjPciy1gaoV1psSY5SWhZEjsE"></script>
 </body>
 </html>
