@@ -32,5 +32,15 @@
       <p class="note">Preço pode variar conforme modelo/tamanho, cupom e câmbio. Confira no link.</p>
     </div>
   </div>
+  <script>
+    (function() {
+      try {
+        var m = location.pathname.match(/\/r\/([^\/]+)/);
+        var slug = m ? m[1] : '';
+        var src = new URLSearchParams(location.search).get('src') || 'direct';
+        navigator.sendBeacon('/api/hit?slug=' + encodeURIComponent(slug) + '&src=' + encodeURIComponent(src));
+      } catch (e) {}
+    })();
+  </script>
 </body>
 </html>
